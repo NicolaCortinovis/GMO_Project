@@ -53,15 +53,15 @@ Where _mutation\_rate_ is an hyperparameter given to the algorithm that evolves 
 
 The hyperparameters used for the computations for low/medium images are:
 
-  - factor = 8/10
-  - population-size = 100/100
-  - generations = 10000/20000 
-  - mutation_rate = 0.05/0.05
-  - tournament_size = 10/10
-  - replacement_size = 30/30
-  - c = 1.1/1.1(Rescaling constant used in the 1/5 rule)
-  - min_mutation_rate = 0.001/0.001
-  - max_mutation_rate = 0.35/0.35
+  - factor = $8/10$
+  - population-size = $100/100$
+  - generations = $10000/20000$
+  - mutation_rate = $0.05/0.05$
+  - tournament_size = $10/10$
+  - replacement_size = $30/30$
+  - c = $1.1/1.1$ (Rescaling constant used in the 1/5 rule)
+  - min_mutation_rate = $0.001/0.001$
+  - max_mutation_rate = $0.35/0.35$
 
 # Results
 
@@ -95,7 +95,7 @@ It would seem the algorithm isn't capable of escaping the local optima, this can
 
 ## High resolution
 
-Due to the very long computational time (24 hours $\sim$) runs with higher resolution were not yet tested. With similar other hyperparameters, it is expected for the algorithm to take more generations to converge to a local optima since the population size must be reduced due to memory limitations and the search space is larger.
+Due to the very long computational time ($24$ hours $\sim$) runs with higher resolution were not yet tested. With similar other hyperparameters, it is expected for the algorithm to take more generations to converge to a local optima since the population size must be reduced due to memory limitations and the search space is larger.
 
 
 # How to run
