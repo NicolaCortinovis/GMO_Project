@@ -27,11 +27,11 @@ To choose which individuals are allowed to “reproduce”, tournament selection
 ### Fitness
 
 As mentioned above, the fitness chosen here is the MSE, let:
-- $ I_{\text{target}}$: the target image,
-- $ I_{\text{upscaled}} $: the upscaled individual image,
-- $ H $: the image height,
-- $ W $: the image width,
-- $ C $: the number of color channels (3 for RGB),
+- $I_{\text{target}}$: the target image,
+- $I_{\text{upscaled}}$: the upscaled individual image,
+- $H$: the image height,
+- $W$: the image width,
+- $C$: the number of color channels (3 for RGB),
 
 then the MSE is calculated as:
 
