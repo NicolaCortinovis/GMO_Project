@@ -34,9 +34,8 @@ As mentioned above, the fitness chosen here is the MSE, let:
 - $ C $: the number of color channels (3 for RGB),
 
 then the MSE is calculated as:
-$$
-\text{MSE}(I_{\text{target}}, I_{\text{upscaled}}) = \frac{1}{H \cdot W \cdot C} \sum_{c=1}^{C} \sum_{i=1}^{H} \sum_{j=1}^{W} \left( I_{\text{target}}(i, j, c) - I_{\text{upscaled}}(i, j, c) \right)^2
-$$
+
+$$\text{MSE}(I_{\text{target}}, I_{\text{upscaled}}) = \frac{1}{H \cdot W \cdot C} \sum_{c=1}^{C} \sum_{i=1}^{H} \sum_{j=1}^{W} \left( I_{\text{target}}(i, j, c) - I_{\text{upscaled}}(i, j, c) \right)^2$$
 
 ### Crossover
 
@@ -45,9 +44,9 @@ The crossover used is a submatrix crossover: we randomly choose the dimension of
 ### Mutation
 
 The mutation implementation tried to obtain a “geometric effect” by allowing only for slight changes in the RGB values: between -20 and 20 of the original values for each of the channels. The number of pixels selected for mutations for each individual are given by this formula:
-$$
-\text{num\_mutations} = \max(1, (\text{height} * \text{width} * \text{mutation\_rate}))
-$$
+
+$$\text{num mutations} = \max(1, (\text{height} * \text{width} * \text{mutation rate}))$$
+
 Where _mutation\_rate_ is an hyperparameter given to the algorithm that evolves during the computation following the $1/5$ rule described in [Self-Adjusting Mutation Rates with Provably Optimal Success Rules](https://doi.org/10.1007/s00453-021-00854-3) for discrete spaces in genetic algorithms.
 
 ### Hyperparameters
@@ -96,7 +95,7 @@ It would seem the algorithm isn't capable of escaping the local optima, this can
 
 ## High resolution
 
-Due to the very long computational time (1+ day $\sim$) runs with higher resolution were not yet tested. With similar other hyperparameters, it is expected for the algorithm to take more generations to converge to a local optima since the population size must be reduced due to memory limitations and the search space is larger.
+Due to the very long computational time (24 hours $\sim$) runs with higher resolution were not yet tested. With similar other hyperparameters, it is expected for the algorithm to take more generations to converge to a local optima since the population size must be reduced due to memory limitations and the search space is larger.
 
 
 # How to run
