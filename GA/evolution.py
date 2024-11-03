@@ -38,7 +38,7 @@ def genetic_algorithm(image_path : str,
     '''
 
     if(c <= 1):
-        raise ValueError('This hyperparameter governs the mutation rate update based on the 1/5 rule and must be > 1')
+        raise ValueError('This hyperparameter governs the mutation rate update based on the 1/5 rule and must be <= 1')
 
     # Load the image and downsample it
     original_image = load_image(image_path)
